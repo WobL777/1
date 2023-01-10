@@ -1,0 +1,41 @@
+<!doctype html>
+ <html lang="en">
+  <head> 
+   <title>Морской, нахер,бой!!!</title>
+   <meta charset = "utf-8">
+  </head>
+ <body>
+  <h1>Давай играть в МОРСКОЙ, нахер, БОЙ!!!<h1>
+ <script>
+var ShipPiece1 = 3;
+var ShipPiece2 = 4;
+var ShipPiece3 = 5;
+var Attempt;
+var Shot = 0;
+var Attempts = 0;
+var IsKilled = false;
+    while (IsKilled == false) {
+        Attempt = prompt("ОГОНЬ! (Введите число от 0 до 6)");
+        if (Attempt < 0 || Attempt > 6) {
+            alert("Чо тупишь? От 0 до 6 же сказали!!!");
+        } else {
+            Attempts = Attempts + 1;
+        }
+        if (Attempt == ShipPiece1 || Attempt == ShipPiece2 || Attempt == ShipPiece3) {
+            Shot = Shot + 1;
+            alert("АЙ!!! Больно же!!!");
+            if (Shot == 3) {
+                IsKilled = true;
+                alert("Ну все,все! Молодец! Утопил кораблик.");
+            }
+        } else {
+            alert("АХАХАХА!!! Косопузый!!!");
+        }
+
+    }
+    var stats = "У тебя заняло" + " " + Attempts + " " + "попыток утопить кораблик. ЛОХ!!!)";
+    alert(stats);
+    </script>
+ </body>
+</html>
+    
