@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bubble Score</title>
+</head>
+<body>
+  <script>
+    var score = [55, 42, 33, 12, 77 ,52,7,16,41,32,25,37,18,20,37,41,4,11,50];
+    var output;
+        for (var i = 0; i < score.length; i=i+1) {
+            output = "bubble score " + " " + i + ":" + "      " + score[i];
+            console.log(output);
+        }  
+  </script>
+</body>
+</html>
