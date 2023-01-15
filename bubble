@@ -6,12 +6,45 @@
 </head>
 <body>
   <script>
-    var score = [55, 42, 33, 12, 77 ,52,7,16,41,32,25,37,18,20,37,41,4,11,50];
+   var score = [78, 42, 33, 12, 78 ,52,7,16,41,32,25,37,18,20,37,41,78,4,11,78];
+var cost = [29, 27, 83, 20, 120, 40, 10, 50, 60, 36, 25, 20, 30, 40, 10, 50, 88, 36, 25, 20];
+function printAndGetHighScore (score) {
+    var highscore = 0
     var output;
-        for (var i = 0; i < score.length; i=i+1) {
-            output = "bubble score " + " " + i + ":" + "      " + score[i];
-            console.log(output);
-        }  
+    for (var i = 0; i < score.length; i++) {
+        output = "Выпавший бочонок " + " " + i + ":" + "      " + score[i];
+        console.log(output);
+        if (score[i] > highscore) {
+            highscore = score[i];
+        }
+    }
+    return highscore;
+}
+var highscore = printAndGetHighScore(score);
+console.log ("Колличество боченков" + "    " + score.length);
+console.log ("Максимальный результат" + "    " + highscore);
+var TopResults = [];
+for (var i = 0; i < score.length; i++) {
+    if (score[i] == highscore) {
+        TopResults.push(i);
+    }
+}
+function GetMostEfefective (score, highscore,cost) {
+    var lowscore = 100;
+    var index ;
+    for (var i = 0; i < score.length; i++) {
+        if (score[i] == highscore) {
+         if (cost[i] < lowscore) {
+            index = i;
+            lowscore = cost[i];
+        }
+    }
+    }
+    return index;
+}
+var MostEffective = GetMostEfefective (score, highscore,cost);
+    console.log ("Наилучшие результаты" + "    " + TopResults);
+    console.log ("Наилучший показатель эффктивности" + "   " + "бочнокок" + " " + MostEffective);
   </script>
 </body>
 </html>
