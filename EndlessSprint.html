@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Endless sprint</title>
+    <h1>Бесконечный спринт</h1>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        {
+            background-color: red;  ;
+        }
+        div#board {
+            position: relative;
+            width: 598px;
+            height: 598px;
+            margin: auto;
+            background: url("board.png") no-repeat;
+        }
+        table {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            border-spacing: 0px;
+        }
+        td {
+            width: 190px;
+            height: 190px;
+        }
+        .hit {
+            background: url("ship.png") no-repeat center center;
+        }
+        </style>
+</head>
+<body>
+<div id="board"></div>
+    <table>
+        <tr>
+            <td id="00"></td><td id="01"></td><td id="02"></td>
+        </tr>
+        <tr>
+            <td id="10"></td><td id="11"></td><td id="12"></td>
+        </tr>
+        <tr>
+            <td id="20"></td><td id="21"></td><td id="22"></td>
+        </tr>
+    </table>
+</body>
+        <script src="EndlessSprint.js"></script>
+</html>
