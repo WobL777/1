@@ -1,16 +1,11 @@
-window.onload = init
-
-function init() {
-    let guess = document.getElementById(location);
-
-    guess.onmouseclick = displayHit;
-}
-
-    function displayHit(location) {
-        var cell = document.getElementById(location);
-        cell.setAttribute("class", "hit");
+let table = document.getElementById("00");
+console.log(table);
+table.onclick = function(event) {
+    let target = event.target;
+    if (target.id === '00') {
+        target.setAttribute("class", "hit");
     }
-
+}
 
      let actions = [{
          name: "Kiril",
